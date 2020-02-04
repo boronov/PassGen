@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+            prefWidth="400.0" style="-fx-border-color: #FF7400; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="boronov.Controller">
+    <children>
+        <VBox layoutY="45.0" prefHeight="455.0" prefWidth="400.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="100.0" prefWidth="410.0" text="Free PassGen">
+                    <graphic>
+                        <ImageView fitHeight="55.0" fitWidth="70.0">
+                            <image>
+                                <Image url="@icon.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="Bauhaus 93" size="42.0"/>
+                    </font>
+                </Label>
+                <JFXTextField fx:id="password" alignment="CENTER" editable="false" text="#$%^&amp;312">
+                    <font>
+                        <Font size="22.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                    </VBox.margin>
+                </JFXTextField>
+                <Label fx:id="passwordLenLabel" alignment="CENTER" contentDisplay="RIGHT" prefHeight="31.0"
+                       prefWidth="400.0" text="Количество символов: ">
+                    <font>
+                        <Font size="17.0"/>
+                    </font>
+                    <graphic>
+                        <JFXTextField fx:id="setLenOfPassword" prefHeight="25.0" prefWidth="56.0" text="8">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </JFXTextField>
+                    </graphic>
+                </Label>
+                <JFXButton fx:id="generatePasswordLabel" alignment="CENTER" contentDisplay="CENTER"
+                           onMouseClicked="#generatePassword" prefHeight="54.0" prefWidth="400.0"
+                           style="-fx-background-color: #FF7400;" text="Сгенерировать" textFill="WHITE">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                    </VBox.margin>
+                </JFXButton>
+                <HBox prefHeight="60.0" prefWidth="400.0" style="-fx-alignment: center;">
+                    <children>
+                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#changeToTJ">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@tjLang.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#changeToRu">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@ruLang.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#changeToEn">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image url="@enLang.png"/>
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                    </children>
+                </HBox>
+                <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#exitButton"
+                           prefHeight="50.0" prefWidth="400.0">
+                    <graphic>
+                        <ImageView>
+                            <image>
+                                <Image url="@exit.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
